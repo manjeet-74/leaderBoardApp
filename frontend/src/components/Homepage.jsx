@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from "react";
-import Header from "./Header";
 import { config } from "../config";
 
 const HomePage = () => {
@@ -33,7 +32,7 @@ const HomePage = () => {
   // API calls
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/user");
+      const response = await fetch(`${config.apiBaseUrl}/api/user`);
       const data = await response.json();
       setUsers(data);
     } catch (error) {
@@ -44,10 +43,9 @@ const HomePage = () => {
   const fetchLeaderboard = async () => {
     try {
       const response = await fetch(
-        "${config.apiBaseUrl}/api/points/leaderboard"
+        `${config.apiBaseUrl}/api/points/leaderboard`
       );
       const data = await response.json();
-      console.log(data);
       setLeaderboard(data || []);
     } catch (error) {
       console.error("Error fetching leaderboard:", error);
@@ -56,11 +54,9 @@ const HomePage = () => {
 
   const fetchHistory = async () => {
     try {
-      const response = await fetch("${config.apiBaseUrl}/api/claims/history");
+      const response = await fetch(`${config.apiBaseUrl}/api/claims/history`);
       const data = await response.json();
-      // console.log(data);
       setHistory(data || []);
-      // setLeaderboard(data || []);
     } catch (error) {
       console.error("Error fetching history:", error);
     }
@@ -118,7 +114,7 @@ const HomePage = () => {
 
     setLoading(true);
     try {
-      const response = await fetch("${config.apiBaseUrl}/api/user", {
+      const response = await fetch(`${config.apiBaseUrl}/api/user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
