@@ -1,0 +1,139 @@
+# Node build artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# Lockfiles (commit ONE if you prefer deterministic installs; otherwise ignore all)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment files (root, frontend, backend)
+.env
+.env.local
+.env.*.local
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+backend/.env
+backend/.env.local
+backend/.env.*.local
+
+# Frontend (Vite/React/Tailwind)
+frontend/dist/
+frontend/.vite/
+frontend/node_modules/
+frontend/node_modules/.vite-temp/
+frontend/.cache/
+frontend/.eslintcache
+# CRA build (if ever used)
+frontend/build/
+# Tailwind caches (optional)
+frontend/.tailwindcache
+
+# Backend (Express/Mongoose)
+backend/node_modules/
+backend/.eslintcache
+
+# TypeScript build info
+**/*.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+backend/tsconfig.tsbuildinfo
+
+# Logs (both apps)
+logs/
+*.log
+frontend/*.log
+backend/*.log
+frontend/logs/
+backend/logs/
+
+# Coverage
+coverage/
+frontend/coverage/
+backend/coverage/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostics
+*.tsbuildinfo
+
+# PM2
+.pids
+
+# OS-specific
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Linux
+*~
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor/IDE
+.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+
+# Optional caches and temp
+.cache/
+.tmp/
+temp/
+tmp/
+
+# Test tooling
+.jest/
+jest-cache/
+jest-coverage/
+frontend/.jest/
+backend/.jest/
+
+# Database dumps/backups (optional)
+prisma/*.db
+dump/
+backups/
+
+# Docker (optional)
+docker-data/
+**/.docker/**
+*.local.yml
+
+# Uploads (if app writes to disk)
+uploads/
+public/uploads/
+
+# Misc generated files
+*.orig
+*.rej
+
+# Storybook (if used)
+.storybook-out/
+storybook-static/
+
+# Prettier/ESLint caches
+.eslintcache
+frontend/.eslintcache
+backend/.eslintcache
+.prettier-cache
+
+# NPM local binaries cache
+.npm/
+frontend/.npm/
+backend/.npm/

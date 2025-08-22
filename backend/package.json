@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for leaderBoard",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --exec 'node -r dotenv-flow/config src/index.js'",
+    "start": "node -r dotenv-flow/config src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv-flow": "^4.1.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.2"
+  }
+}
