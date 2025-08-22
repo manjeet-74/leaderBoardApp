@@ -4,19 +4,22 @@
   "description": "Backend for leaderBoard",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch src --exec 'node -r dotenv-flow/config src/index.js'",
-    "start": "node -r dotenv-flow/config src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo 'Build complete'",
+    "start": "netlify dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "activate": "^0.0.1",
+    "base": "^3.0.0",
     "body-parser": "^2.2.0",
+    "conda": "^0.0.1-a17",
     "cors": "^2.8.5",
     "dotenv-flow": "^4.1.0",
     "express": "^5.1.0",
-    "mongoose": "^8.17.2"
+    "mongoose": "^8.17.2",
+    "serverless-http": "^3.2.0"
   }
 }
